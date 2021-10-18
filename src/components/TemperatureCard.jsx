@@ -5,14 +5,21 @@ export const TemperatureCard = () => {
   const [temp, setTemp] = useState(0);
 
   const setRandomTemperature = () => {
-    setTemp(Math.random()* 2 + 1);
+    setTemp(Math.random() * 2 + 1);
   };
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card>
       <Card.Title>Aquarium Temperature</Card.Title>
-      <Card.Body>The current temperature is: {JSON.stringify(temp)}</Card.Body>
-      <Button onClick={setRandomTemperature}>Random Temperature</Button>
+      <Card.Body>
+        <Card.Text>
+          The current temperature is: {JSON.stringify(temp)}°F
+        </Card.Text>
+
+        <Button className="" onClick={setRandomTemperature}>
+          Random Temperature
+        </Button>
+      </Card.Body>
     </Card>
   );
 };

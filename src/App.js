@@ -1,14 +1,23 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { BaseNavbar } from "./components/BaseNavbar";
+import { LightCard } from "./components/LightCard";
 import { TemperatureCard } from "./components/TemperatureCard";
 
 function App() {
   return (
     <div className="App">
       <BaseNavbar />
-      <Container className="my-2">
-        <TemperatureCard />
-        Camera Light Status
+      <Container>
+        <Row className="mb-2">
+          <Col>
+            <TemperatureCard />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <LightCard />
+          </Col>
+        </Row>
       </Container>
     </div>
   );
